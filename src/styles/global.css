@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "./buttons.css";
+
+@theme {
+    --font-sans: var(--font-neuf);
+
+    --color-tech: #FF9CFF;
+    --color-error: #FF0000;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-dark-1: #5C1F00;
+    --color-dark-2: #AE8C6D;
+    --color-dark-3: #D7C3A3;
+    --color-light: #FFF5D9;
+    --color-primary: #FF5107;
+}
+

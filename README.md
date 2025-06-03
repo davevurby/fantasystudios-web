@@ -1,48 +1,73 @@
-# Astro Starter Kit: Basics
+# Fantasy Studios Web
 
-```sh
-bun create astro@latest -- --template basics
+This is the web project for **Fantasy Studios**. It is built with [Astro](https://astro.build/) and uses a custom design system for UI components, including a flexible and accessible button system.
+
+## 🚀 Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   bun install
+   ```
+2. **Start the development server:**
+   ```sh
+   bun dev
+   ```
+   The site will be available at `http://localhost:4321` by default.
+
+3. **Build for production:**
+   ```sh
+   bun build
+   ```
+
+4. **Preview the production build:**
+   ```sh
+   bun preview
+   ```
+
+## 📁 Project Structure
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
+├── public/                # Static assets
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/        # UI components (Astro, React, etc.)
+│   ├── layouts/           # Layout components
+│   ├── pages/             # Astro pages
+│   └── styles/            # Global and component CSS
+├── docs/
+│   └── buttons.md         # Button system documentation
+├── package.json
+└── README.md
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧩 UI Components & Design System
 
-## 🧞 Commands
+- **Buttons:**
+  - A comprehensive button system is implemented using custom CSS classes.
+  - See [`docs/buttons.md`](docs/buttons.md) for all available button variants, sizes, states, and usage examples.
 
-All commands are run from the root of the project, from a terminal:
+- **Other Components:**
+  - Add or update components in `src/components/` as needed for the Fantasy Studios web experience.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+## 📝 Documentation
 
-## 👀 Want to learn more?
+- **Button System:** See [`docs/buttons.md`](docs/buttons.md) for detailed usage and customization instructions.
+- For other design or component documentation, add new markdown files in the `docs/` directory.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🛠 Development Notes
+
+- This project uses [Bun](https://bun.sh/) for fast installs and scripts.
+- Styles are managed with a combination of Tailwind CSS and custom CSS layers.
+- For responsive design, use Tailwind's responsive prefixes (e.g., `lg:btn-lg`).
+- Accessibility and semantic HTML are prioritized in all components.
+
+## 🤝 Contributing
+
+1. Fork or clone the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and add/modify documentation as needed.
+4. Open a pull request for review.
+
+---
+
+For any questions or to discuss design decisions, please reach out to the Fantasy Studios web team.
