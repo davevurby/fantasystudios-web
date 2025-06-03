@@ -209,14 +209,14 @@
 
 @utility btn-sm {
     height: 32px;
-    padding: 8px 16px;
+    padding: 9px 16px 7px 16px;
     font-size: 11px;
     letter-spacing: 2.2px;
 }
 
 @utility btn-lg {
     height: 56px;
-    padding: 20px 32px;
+    padding: 21px 32px 19px 32px;
     font-size: 12px;
     letter-spacing: 2.4px;
 }
