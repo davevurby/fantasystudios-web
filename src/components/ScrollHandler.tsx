@@ -50,13 +50,14 @@ export const ScrollHandler = () => {
 
     const videoRefs = useRef<HTMLVideoElement[]>([]);
     const lastChange = useRef<NodeJS.Timeout | null>(null);
+    const touchStart = useRef<number | null>(null);
 
-    const handleScroll = useCallback((e: WheelEvent) => {
+    const handleDeltaChange = useCallback((deltaY: number) => {
         const videoData = VIDEOS_DATA[activeIndex];
         const currentVideo = videoRefs.current[activeIndex];
         if (!currentVideo) return;
 
-        if (videoData.type === 'scene' && !isChanging && e.deltaY > 10 && activeIndex < VIDEOS_DATA.length - 1) {
+        if (videoData.type === 'scene' && !isChanging && deltaY > 10 && activeIndex < VIDEOS_DATA.length - 1) {
             currentVideo.pause();
             setActiveIndex(activeIndex + 1);
             setIsChanging(true);
@@ -67,7 +68,7 @@ export const ScrollHandler = () => {
             }, 1000);
         }
 
-        if (videoData.type === 'scene' && !isChanging && e.deltaY < -10 && activeIndex > 1) {
+        if (videoData.type === 'scene' && !isChanging && deltaY < -10 && activeIndex > 1) {
             currentVideo.pause();
             setActiveIndex(activeIndex - 2);
             setIsChanging(true);
@@ -77,7 +78,26 @@ export const ScrollHandler = () => {
                 setIsChanging(false);
             }, 1000);
         }
-    }, [activeIndex, isChanging])
+    }, [activeIndex, isChanging]);
+
+    const handleScroll = useCallback((e: WheelEvent) => {
+        handleDeltaChange(e.deltaY);
+    }, [handleDeltaChange])
+
+    const handleTouchStart = useCallback((e: TouchEvent) => {
+        touchStart.current = e.touches[0].clientY;
+    }, [])
+
+    const handleTouchMove = useCallback((e: TouchEvent) => {
+        if (touchStart.current) {
+            const deltaY = e.touches[0].clientY - touchStart.current;
+            handleDeltaChange(deltaY * -1);
+        }
+    }, [handleDeltaChange])
+
+    const handleTouchEnd = useCallback((e: TouchEvent) => {
+        touchStart.current = null;
+    }, [])
 
     useEffect(() => {
         const videoData = VIDEOS_DATA[activeIndex];
@@ -106,6 +126,18 @@ export const ScrollHandler = () => {
             window.removeEventListener('wheel', handleScroll)
         }
     }, [handleScroll])
+
+    useEffect(() => {
+        window.addEventListener('touchmove', handleTouchMove)
+        window.addEventListener('touchstart', handleTouchStart)
+        window.addEventListener('touchend', handleTouchEnd)
+
+        return () => {
+            window.removeEventListener('touchmove', handleTouchMove)
+            window.removeEventListener('touchstart', handleTouchStart)
+            window.removeEventListener('touchend', handleTouchEnd)
+        }
+    }, [handleTouchMove, handleTouchStart, handleTouchEnd])
 
     return (
         <main className="relative w-full h-screen">
