@@ -1,8 +1,22 @@
 ---
+import FifthScene from '../components/FifthScene.astro';
+import FirstScene from '../components/FirstScene.astro';
+import FourthScene from '../components/FourthScene.astro';
+import { Nav } from '../components/Nav';
 import { ScrollHandler } from '../components/ScrollHandler';
+import SecondScene from '../components/SecondScene.astro';
+import ThirdScene from '../components/ThirdScene.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
 	<ScrollHandler client:load />
+
+	<FirstScene />
+	<SecondScene />
+	<ThirdScene />
+	<FourthScene />
+	<FifthScene />
+
+	<Nav client:load />
 </Layout>

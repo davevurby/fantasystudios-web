@@ -1,0 +1,19 @@
+---
+import { SceneVisibilityHandler } from "./SceneVisibilityHandler";
+import { Play } from "lucide-react";
+---
+
+<div id="scn1" class="fixed z-[10] h-screen w-screen flex flex-col items-center justify-center transition-all duration-300 opacity-0">
+	<div class="fantasy-container">
+        <div id="content-block" class="flex flex-col items-start justify-center gap-[16px] md:gap-[24px] absolute bottom-[25vh] translate-y-[50%] [@media(orientation:landscape)]:top-[50vh] [@media(orientation:landscape)]:bottom-auto [@media(orientation:landscape)]:translate-y-0">
+            <h2 class="text-left title-heading-1">The reality<br /> has never been </br>more real.</h2>
+
+		    <button type="button" class="btn-primary-light btn-sm lg:btn-lg cursor-pointer flex items-center gap-[10px]">
+                <Play className="translate-y-[-1px] size-[12px] md:size-[16px]" />
+                showreal
+            </button>	
+        </div>
+	</div>
+</div>
+
+<SceneVisibilityHandler sceneId="scn1" client:load />

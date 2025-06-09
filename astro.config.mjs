@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 
 import react from '@astrojs/react';
 
@@ -23,6 +23,11 @@ export default defineConfig({
               src: ["./public/fonts/Neuf.otf"]
           },
       ]
-  }]
+  },
+  {
+    provider: fontProviders.google(),
+    name: "Afacad",
+    cssVariable: "--font-afacad"
+}]
   },
 });

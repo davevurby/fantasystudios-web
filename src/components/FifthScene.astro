@@ -1,0 +1,28 @@
+---
+import { SceneVisibilityHandler } from "./SceneVisibilityHandler";
+import { VolumeOff } from "lucide-react";
+---
+
+<div id="scn5" class="fixed top-0 left-0 z-[11] h-screen w-screen transition-opacity duration-300 opacity-0 translate-y-full">
+	<div class="fantasy-container pt-[50vh]">
+		<div class="translate-y-[-50%] flex flex-col gap-[32px] lg:gap-[40px]">
+			<div>
+				<h2 class="text-left title-heading-1">
+					The best
+				</h2>
+				<p class="text-left font-afacad text-light text-[22px] md:text-[24px] tracking-[0.02em] leading-[1.2]">
+					People, resolution, size.
+				</p>
+			</div>
+
+			<div class="flex">
+				<button class="btn-primary-light btn-sm lg:btn-lg flex items-center gap-[10px]">
+                    <VolumeOff className="translate-y-[-1px] size-[12px] md:size-[16px]" />
+					People & fantasies
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<SceneVisibilityHandler sceneId="scn5" client:load />

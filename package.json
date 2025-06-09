@@ -15,8 +15,10 @@
     "@types/react-dom": "^19.1.5",
     "astro": "^5.8.1",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.513.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "zustand": "^5.0.5"
   }
 }
