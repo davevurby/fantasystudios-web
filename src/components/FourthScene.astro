@@ -1,5 +1,6 @@
 ---
 import { SceneVisibilityHandler } from "./SceneVisibilityHandler";
+import { StudioButton } from "./StudioButton";
 ---
 
 <div id="scn4" class="fixed top-0 left-0 z-[11] h-screen w-screen flex flex-col items-center justify-center transition-opacity duration-300 opacity-0 translate-y-full">
@@ -18,17 +19,17 @@ import { SceneVisibilityHandler } from "./SceneVisibilityHandler";
 
 		<div class="flex gap-[32px] pt-[32px]">
 			<div class="flex flex-col gap-[10px] items-center flex-grow">
-				<button class="btn-secondary-orange w-full justify-center btn-sm lg:btn-lg">
+				<StudioButton studio="A" client:load>
 					studio a
-				</button>
+				</StudioButton>
 	
 				<span class="text-light text-[12px] tracking-[0.4em]">29.4m × 27.7m</span>
 			</div>
 
 			<div class="flex flex-col gap-[10px] items-center flex-grow">
-				<button class="btn-secondary-orange w-full justify-center btn-sm lg:btn-lg">
+				<StudioButton studio="B" client:load>
 					studio b
-				</button>
+				</StudioButton>
 
 				<span class="text-light text-[12px] tracking-[0.4em]">17.4m × 12.1m</span>
 			</div>

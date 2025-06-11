@@ -5,6 +5,7 @@ import FourthScene from '../components/FourthScene.astro';
 import { Nav } from '../components/Nav';
 import { ScrollHandler } from '../components/ScrollHandler';
 import SecondScene from '../components/SecondScene.astro';
+import { StudioView } from '../components/StudioView';
 import ThirdScene from '../components/ThirdScene.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -18,5 +19,6 @@ import Layout from '../layouts/Layout.astro';
 	<FourthScene />
 	<FifthScene />
 
+	<StudioView client:load />
 	<Nav client:load />
 </Layout>

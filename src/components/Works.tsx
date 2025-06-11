@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useActiveScene } from "../hooks/use-active-scene";
 import clsx from "clsx";
-import { createPortal } from "react-dom";
 
 export const Works = () => {
     const { setDisableChangingSceneByScroll} = useActiveScene();
