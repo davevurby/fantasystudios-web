@@ -59,7 +59,7 @@ export const VIDEOS_DATA: Scene[] = [
         id: 'scn5',
         type: 'scene',
         src: '/videos/10 Scn 5.mp4',
-        logoColor: 'light',
+        logoColor: 'primary',
     },
     {
         id: 'end',
