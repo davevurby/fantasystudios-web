@@ -27,30 +27,30 @@ export const Works = () => {
     return (
         <>
             <div className="flex gap-[14px] md:gap-[32px] flex-wrap w-full items-center justify-center">
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
 
                 {opened && (
                     <>
-                    <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                    <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                    <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
-                <div className="bg-red-500 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+                    <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
                     </>
                 )}
             </div>

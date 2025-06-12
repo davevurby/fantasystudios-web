@@ -23,7 +23,7 @@
 
 @layer components {
     .title-heading-1 {
-        @apply uppercase tracking-[0.1em] leading-[1.2] text-[20px] md:text-[24px] font-bold text-light;
+        @apply h1-small md:h1-large text-light;
     }
 
     .fantasy-container {
@@ -52,3 +52,42 @@
     }
 }
 
+@utility h1-large {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@utility h1-small {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@utility h2-large {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@utility body-1-large {
+    font-family: var(--font-afacad);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
+
+@utility body-3-large {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}

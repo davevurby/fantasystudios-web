@@ -1,10 +1,16 @@
 import { create } from "zustand";
 import { VIDEOS_DATA } from "../config";
 
-export interface Scene {
+export type Scene = {
     id: string;
     type: 'scene' | 'transition';
     src: string;
+    logoColor: 'primary' | 'light';
+} | {
+    id: string;
+    type: 'common';
+    contentElementId: string;
+    logoColor: 'primary' | 'light';
 };
 
 interface ActiveSceneStore {
