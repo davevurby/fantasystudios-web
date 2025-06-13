@@ -13,7 +13,7 @@ export const StudioButton = ({ children, studio }: PropsWithChildren<StudioButto
     }
 
     return (
-        <button className="btn-secondary-orange w-full justify-center btn-sm lg:btn-lg" onClick={handleClick}>
+        <button className="btn-secondary-orange w-full justify-center btn-sm lg:btn-lg cursor-pointer" onClick={handleClick}>
             {children}
         </button>
     )
