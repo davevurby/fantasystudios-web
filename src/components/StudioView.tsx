@@ -30,7 +30,7 @@ export const StudioView = () => {
                     {visibleStudio === 'A' && (
                         <div className="flex flex-col gap-[120px]">
                             <div className="flex flex-col md:flex-row gap-[32px] w-full">
-                                <div className="flex flex-col gap-[32px] flex-grow">
+                                <div className="flex flex-col gap-[32px] w-[50%] flex-grow">
                                     <div className="flex flex-col gap-[4px]">
                                         <h4 className="h4-large text-primary">
                                             Studio A Size
@@ -54,7 +54,7 @@ export const StudioView = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col gap-[32px] flex-grow">
+                                <div className="flex flex-col gap-[32px] w-[50%] flex-grow">
                                     <div className="flex flex-col gap-[4px]">
                                         <h4 className="h4-large text-primary">
                                             Wild wall
