@@ -1,4 +1,5 @@
 ---
+import { ModalOpenButton } from "./ModalOpenButton";
 import { SceneVisibilityHandler } from "./SceneVisibilityHandler";
 ---
 
@@ -17,17 +18,17 @@ import { SceneVisibilityHandler } from "./SceneVisibilityHandler";
 
 	<div class="fixed top-[76vh] left-0 w-full">
 		<div class="fantasy-container flex flex-col items-start gap-[10px] translate-y-0 [@media(orientation:landscape)]:flex-row lg:gap-[32px] [@media(orientation:landscape)]:translate-y-[-50%]">
-			<button class="btn-primary-light btn-sm lg:btn-lg">
+			<ModalOpenButton type="btn-primary-light" id="VIRTUAL_PRODUCTION" client:load>
 				virtual production
-			</button>
+			</ModalOpenButton>
 
-			<button class="btn-primary-light btn-sm lg:btn-lg">
+			<ModalOpenButton type="btn-primary-light" id="STUDIO_A" client:load>
 				content creation
-			</button>
+			</ModalOpenButton>
 
-			<button class="btn-primary-light btn-sm lg:btn-lg">
+			<ModalOpenButton type="btn-primary-light" id="STUDIO_A" client:load>
 				motion capturing
-			</button>
+			</ModalOpenButton>
 		</div>
 	</div>
 </div>

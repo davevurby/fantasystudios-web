@@ -1,14 +1,14 @@
 import clsx from "clsx"
 import { useActiveScene } from "../hooks/use-active-scene"
-import { useStudioViewStore } from "../hooks/use-studio-view";
+import { useModal } from "../hooks/use-modal";
 import { useNavStore } from "../hooks/use-nav";
 
 export const Nav = () => {
     const { activeIndex, setActiveIndex, activeScene } = useActiveScene()
-    const { visibleStudio, setVisibleStudio } = useStudioViewStore();
+    const { modal: visibleStudio, setModal: setVisibleStudio } = useModal();
     const { disableLinks } = useNavStore();
 
-    const handleStudioClick = (studio: 'A' | 'B') => {
+    const handleStudioClick = (studio: 'STUDIO_A' | 'STUDIO_B') => {
         setVisibleStudio(studio);
     }
 
@@ -51,15 +51,15 @@ export const Nav = () => {
                 <div className="relative flex gap-[4px] p-[4px] border border-primary">
                     <button className={clsx(
                         "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto cursor-pointer transition-all duration-800",
-                        visibleStudio === 'A' && "text-dark-1 bg-primary",
-                        visibleStudio !== 'A' && "text-primary"
-                    )} onClick={() => handleStudioClick('A')}>studio a</button>
+                        visibleStudio === 'STUDIO_A' && "text-dark-1 bg-primary",
+                        visibleStudio !== 'STUDIO_A' && "text-primary"
+                    )} onClick={() => handleStudioClick('STUDIO_A')}>studio a</button>
 
                     <button className={clsx(
                         "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto cursor-pointer transition-all duration-800",
-                        visibleStudio === 'B' && "text-dark-1 bg-primary",
-                        visibleStudio !== 'B' && "text-primary"
-                    )} onClick={() => handleStudioClick('B')}>studio b</button>
+                        visibleStudio === 'STUDIO_B' && "text-dark-1 bg-primary",
+                        visibleStudio !== 'STUDIO_B' && "text-primary"
+                    )} onClick={() => handleStudioClick('STUDIO_B')}>studio b</button>
 
                     <div className="absolute top-[calc(100%+7px)] left-0 w-full text-center text-primary uppercase text-[9px] tracking-[2em] px-[44px]">studios</div>
                 </div>

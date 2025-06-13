@@ -6,7 +6,7 @@ import FourthScene from '../components/FourthScene.astro';
 import { Nav } from '../components/Nav';
 import { ScrollHandler } from '../components/ScrollHandler';
 import SecondScene from '../components/SecondScene.astro';
-import { StudioView } from '../components/StudioView';
+import { ModalView } from '../components/ModalView';
 import ThirdScene from '../components/ThirdScene.astro';
 import Layout from '../layouts/Layout.astro';
 import { MapOverlay } from '../components/MapOverlay';
@@ -22,7 +22,7 @@ import { MapOverlay } from '../components/MapOverlay';
 	<FifthScene />
 	<ContactScene />
 
-	<StudioView client:load />
+	<ModalView client:load />
 	<Nav client:load />
 	<MapOverlay client:load />
 </Layout>
