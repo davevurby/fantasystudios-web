@@ -76,6 +76,14 @@
     text-transform: uppercase;
 }
 
+@utility h2-small {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 @utility h3-large {
     font-size: 16px;
     font-weight: 700;
