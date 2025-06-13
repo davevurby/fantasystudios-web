@@ -35,14 +35,14 @@ export const Nav = () => {
                 activeScene?.type === 'transition' && 'opacity-0',
             )}>
                 <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800",
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
                     activeIndex === 3 && "text-dark-1 bg-primary",
                     activeIndex !== 3 && "text-primary",
                     disableLinks && "opacity-0 pointer-events-none"
                 )} onClick={() => handleSceneChange(3)}>projects</button>
 
                 <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800",
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
                     activeIndex === 5 && "text-dark-1 bg-primary",
                     activeIndex !== 5 && "text-primary",
                     disableLinks && "opacity-0 pointer-events-none"
@@ -65,14 +65,14 @@ export const Nav = () => {
                 </div>
 
                 <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800",
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
                     activeIndex === 9 && "text-dark-1 bg-primary",
                     activeIndex !== 9 && "text-primary",
                     disableLinks && "opacity-0 pointer-events-none"
                 )} onClick={() => handleSceneChange(9)}>about us</button>
 
                 <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800",
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
                     activeIndex === 10 && "text-dark-1 bg-primary",
                     activeIndex !== 10 && "text-primary",
                     disableLinks && "opacity-0 pointer-events-none"
