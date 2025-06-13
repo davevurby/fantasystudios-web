@@ -5,7 +5,7 @@ import { useNavStore } from "../hooks/use-nav";
 
 export const Nav = () => {
     const { activeIndex, setActiveIndex, activeScene } = useActiveScene()
-    const { setVisibleStudio } = useStudioViewStore();
+    const { visibleStudio, setVisibleStudio } = useStudioViewStore();
     const { disableLinks } = useNavStore();
 
     const handleStudioClick = (studio: 'A' | 'B') => {
@@ -50,13 +50,15 @@ export const Nav = () => {
 
                 <div className="relative flex gap-[4px] p-[4px] border border-primary">
                     <button className={clsx(
-                        "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800",
-                        "text-primary"
+                        "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto cursor-pointer transition-all duration-800",
+                        visibleStudio === 'A' && "text-dark-1 bg-primary",
+                        visibleStudio !== 'A' && "text-primary"
                     )} onClick={() => handleStudioClick('A')}>studio a</button>
 
                     <button className={clsx(
-                        "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800",
-                        "text-primary"
+                        "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto cursor-pointer transition-all duration-800",
+                        visibleStudio === 'B' && "text-dark-1 bg-primary",
+                        visibleStudio !== 'B' && "text-primary"
                     )} onClick={() => handleStudioClick('B')}>studio b</button>
 
                     <div className="absolute top-[calc(100%+7px)] left-0 w-full text-center text-primary uppercase text-[9px] tracking-[2em] px-[44px]">studios</div>
