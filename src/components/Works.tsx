@@ -51,6 +51,8 @@ export const Works = () => {
                     <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
                     <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
                     <div className="bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1]" />
+
+                    <div className="w-full h-[132px]" />
                     </>
                 )}
             </div>

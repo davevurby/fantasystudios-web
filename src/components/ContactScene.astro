@@ -1,5 +1,9 @@
 ---
 import { Times } from "./Times";
+import { MapButton } from "./MapButton";
+
+const studiosAddress = "Fantasy Studios, Huťská 249, 272 01 Kladno 1, Czech Republic";
+const officesAddress = "Fantasy Studios, Přístavní 16a, 170 00 Praha 7, Czech Republic";
 ---
 
 <div id="contact-scene" class="min-h-screen">
@@ -14,7 +18,7 @@ import { Times } from "./Times";
             <div class="flex justify-between items-end">
                 <a href="tel:+420725431226" class="h1-large text-dark-1">+420 725 431 226</a>
 
-                <div class="flex flex-col items-end gap-[8px]">
+                <div class="flex flex-col items-end gap-[6px]">
                     <div class="flex gap-[10px] items-end">
                         <div class="small-large text-dark-2">
                             Our time
@@ -59,9 +63,7 @@ import { Times } from "./Times";
                         Czech Republic
                     </p>
 
-                    <a class="btn btn-primary-orange w-full justify-center btn-sm md:btn-lg">
-                        Map
-                    </a>
+                    <MapButton client:idle id="studios" />
                 </div>
 
                 <div class="flex flex-col flex-grow gap-[32px]">
@@ -74,9 +76,7 @@ import { Times } from "./Times";
                         Czech Republic
                     </p>
 
-                    <a class="btn btn-primary-orange w-full justify-center btn-sm md:btn-lg">
-                        Map
-                    </a>
+                    <MapButton client:idle id="offices" />
                 </div>
             </div>
         </div>

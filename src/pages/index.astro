@@ -9,6 +9,7 @@ import SecondScene from '../components/SecondScene.astro';
 import { StudioView } from '../components/StudioView';
 import ThirdScene from '../components/ThirdScene.astro';
 import Layout from '../layouts/Layout.astro';
+import { MapOverlay } from '../components/MapOverlay';
 ---
 
 <Layout>
@@ -23,4 +24,5 @@ import Layout from '../layouts/Layout.astro';
 
 	<StudioView client:load />
 	<Nav client:load />
+	<MapOverlay client:load />
 </Layout>

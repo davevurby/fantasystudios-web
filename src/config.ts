@@ -10,7 +10,7 @@ export const VIDEOS_DATA: Scene[] = [
     {
         id: 'scn1',
         type: 'scene',
-        src: '/videos/02 Scn1 C.mp4',
+        src: '/videos/02 Scn1 B.mp4',
         logoColor: 'light',
     },
     {
