@@ -2,16 +2,20 @@ import clsx from "clsx";
 import { useStudioViewStore } from "../hooks/use-studio-view";
 import { useActiveScene } from "../hooks/use-active-scene";
 import { useEffect } from "react";
+import { useNavStore } from "../hooks/use-nav";
 
 export const StudioView = () => {
     const { visibleStudio, setVisibleStudio } = useStudioViewStore();
+    const { setDisableLinks } = useNavStore();
     const { setDisableChangingSceneByScroll } = useActiveScene();
 
     useEffect(() => {
         if (visibleStudio) {
             setDisableChangingSceneByScroll(true);
+            setDisableLinks(true);
         } else {
             setDisableChangingSceneByScroll(false);
+            setDisableLinks(false);
         }
     }, [visibleStudio]);
 

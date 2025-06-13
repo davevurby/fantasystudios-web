@@ -76,12 +76,27 @@
     text-transform: uppercase;
 }
 
+@utility h3-large {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 @utility body-1-large {
     font-family: var(--font-afacad);
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.01em;
+}
+
+@utility small-large {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
 @utility body-3-large {

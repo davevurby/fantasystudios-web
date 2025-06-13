@@ -42,9 +42,6 @@ export const ScrollHandler = () => {
         if (videoData.type === 'common') {
             const divRef = videoRefs.current[activeIndex] as HTMLDivElement;
 
-
-            console.log('common', deltaY, divRef.scrollTop)
-
             if (deltaY < -10 && divRef.scrollTop === 0) {
                 setActiveIndex(activeIndex - 1);
                 setIsChanging(true);

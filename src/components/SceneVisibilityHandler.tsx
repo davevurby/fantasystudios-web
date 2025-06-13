@@ -16,18 +16,22 @@ export const SceneVisibilityHandler = ({ sceneId }: SceneVisibilityHandlerProps)
     useEffect(() => {
         if (activeScene?.id === sceneId) {
             sceneRef.current?.classList.remove('translate-y-full');
+            sceneRef.current?.classList.add('translate-y-[100px]');
 
             setTimeout(() => {
                 sceneRef.current?.classList.remove('opacity-0');
-            }, 300);
+                sceneRef.current?.classList.remove('translate-y-[100px]');
+            }, 800);
         }
 
         if (activeScene?.id !== sceneId) {
             sceneRef.current?.classList.add('opacity-0');
+            sceneRef.current?.classList.add('translate-y-[100px]');
 
             setTimeout(() => {
+                sceneRef.current?.classList.remove('translate-y-[100px]');
                 sceneRef.current?.classList.add('translate-y-full');
-            }, 300);
+            }, 800);
         }
     }, [activeScene])
 
