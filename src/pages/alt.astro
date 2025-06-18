@@ -45,8 +45,19 @@ import Layout from "../layouts/Layout.astro";
             const video = document.getElementById('scrollVideo') as HTMLVideoElement;
             video.load();
 
+            // Get parameters from URL or use defaults
+            const urlParams = new URLSearchParams(window.location.search);
+            const fps = parseInt(urlParams.get('fps') || '40');
+            const screenHeight = parseInt(urlParams.get('height') || '15000');
+
+            // Update content height based on parameter
+            const contentDiv = document.querySelector('.content') as HTMLDivElement;
+            if (contentDiv) {
+                contentDiv.style.height = `${screenHeight}px`;
+            }
+
             let lastUpdate = 0;
-            const throttleDelay = 1000 / 20; // 20fps = 50ms between updates
+            const throttleDelay = 1000 / fps; // Convert fps to milliseconds between updates
 
             window.addEventListener('scroll', () => {
                 const now = performance.now();
