@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@rive-app/react-canvas": "^4.21.3",
     "@tailwindcss/vite": "^4.1.8",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",

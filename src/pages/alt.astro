@@ -1,16 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import RiveAnimation from "../components/RiveAnimation";
+import { Nav } from "../views/components/Nav";
 ---
 
 <Layout>
+    <RiveAnimation client:load />
+
     <div class="video-container">
         <video id="scrollVideo" playsinline preload="auto">
             <source src="/videos/Warp_PROXY_09_smaller_optimized.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="content h-[15000px]">
-    </div>
+    <main id="content" class="h-[15000px]">
+        <Nav />
+    </main>
 
     <style>
         .video-container {
@@ -30,14 +35,6 @@ import Layout from "../layouts/Layout.astro";
             object-fit: cover;
             will-change: transform;
         }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            padding: 2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
     </style>
 
     <script>
@@ -51,7 +48,7 @@ import Layout from "../layouts/Layout.astro";
             const screenHeight = parseInt(urlParams.get('height') || '80000');
 
             // Update content height based on parameter
-            const contentDiv = document.querySelector('.content') as HTMLDivElement;
+            const contentDiv = document.getElementById('content') as HTMLDivElement;
             if (contentDiv) {
                 contentDiv.style.height = `${screenHeight}px`;
             }
