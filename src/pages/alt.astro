@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
     <div class="video-container">
         <video id="scrollVideo" playsinline preload="auto">
-            <source src="/videos/Warp_PROXY_09.mp4" type="video/mp4">
+            <source src="/videos/Warp_PROXY_09_smaller_optimized.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -47,8 +47,8 @@ import Layout from "../layouts/Layout.astro";
 
             // Get parameters from URL or use defaults
             const urlParams = new URLSearchParams(window.location.search);
-            const fps = parseInt(urlParams.get('fps') || '40');
-            const screenHeight = parseInt(urlParams.get('height') || '15000');
+            const fps = parseInt(urlParams.get('fps') || '50');
+            const screenHeight = parseInt(urlParams.get('height') || '80000');
 
             // Update content height based on parameter
             const contentDiv = document.querySelector('.content') as HTMLDivElement;
