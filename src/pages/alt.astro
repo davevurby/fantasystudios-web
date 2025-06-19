@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import RiveAnimation from "../components/RiveAnimation";
 import { Nav } from "../views/components/Nav";
+import SceneA from "../views/SceneA.astro";
+import SceneB from "../views/SceneB.astro";
 ---
 
 <Layout>
@@ -15,6 +17,8 @@ import { Nav } from "../views/components/Nav";
 
     <main id="content" class="h-[15000px]">
         <Nav />
+        <SceneA />
+        <SceneB />
     </main>
 
     <style>
@@ -39,6 +43,9 @@ import { Nav } from "../views/components/Nav";
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const sceneA = document.getElementById('scnA') as HTMLDivElement;
+            const sceneB = document.getElementById('scnB') as HTMLDivElement;
+
             const video = document.getElementById('scrollVideo') as HTMLVideoElement;
             video.load();
 
@@ -56,6 +63,29 @@ import { Nav } from "../views/components/Nav";
             let lastUpdate = 0;
             const throttleDelay = 1000 / fps; // Convert fps to milliseconds between updates
 
+            const handleContentVisibility = (scrollY: number) => {
+                if (!sceneA || !sceneB) return;
+
+                
+                console.log(scrollY);
+
+                if (scrollY > 7300 && scrollY < 16500) {
+                    sceneA.classList.remove('opacity-0');
+                    sceneA.classList.remove('translate-y-full');
+                } else {
+                    sceneA.classList.add('opacity-0');
+                    sceneA.classList.add('translate-y-full');
+                }
+
+                if (scrollY > 21600 && scrollY < 29000) {
+                    sceneB.classList.remove('opacity-0');
+                    sceneB.classList.remove('translate-y-full');
+                } else {
+                    sceneB.classList.add('opacity-0');
+                    sceneB.classList.add('translate-y-full');
+                }
+            }
+
             window.addEventListener('scroll', () => {
                 const now = performance.now();
                 if (now - lastUpdate < throttleDelay) return;
@@ -67,9 +97,9 @@ import { Nav } from "../views/components/Nav";
                 const scrollFraction = scrollTop / maxScroll;
                 const videoDuration = video.duration;
 
-                console.log(scrollFraction * videoDuration, videoDuration);
-
                 video.currentTime = scrollFraction * videoDuration;
+
+                handleContentVisibility(scrollTop);
             });
         });
     </script>
