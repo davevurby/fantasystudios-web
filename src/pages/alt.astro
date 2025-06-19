@@ -4,6 +4,9 @@ import RiveAnimation from "../components/RiveAnimation";
 import { Nav } from "../views/components/Nav";
 import SceneA from "../views/SceneA.astro";
 import SceneB from "../views/SceneB.astro";
+import SceneC from "../views/SceneC.astro";
+import SceneD from "../views/SceneD.astro";
+import SceneE from "../views/SceneE.astro";
 ---
 
 <Layout>
@@ -19,6 +22,9 @@ import SceneB from "../views/SceneB.astro";
         <Nav />
         <SceneA />
         <SceneB />
+        <SceneC />
+        <SceneD />
+        <SceneE />
     </main>
 
     <style>
@@ -45,6 +51,9 @@ import SceneB from "../views/SceneB.astro";
         document.addEventListener('DOMContentLoaded', () => {
             const sceneA = document.getElementById('scnA') as HTMLDivElement;
             const sceneB = document.getElementById('scnB') as HTMLDivElement;
+            const sceneC = document.getElementById('scnC') as HTMLDivElement;
+            const sceneD = document.getElementById('scnD') as HTMLDivElement;
+            const sceneE = document.getElementById('scnE') as HTMLDivElement;
 
             const video = document.getElementById('scrollVideo') as HTMLVideoElement;
             video.load();
@@ -64,7 +73,7 @@ import SceneB from "../views/SceneB.astro";
             const throttleDelay = 1000 / fps; // Convert fps to milliseconds between updates
 
             const handleContentVisibility = (scrollY: number) => {
-                if (!sceneA || !sceneB) return;
+                if (!sceneA || !sceneB || !sceneC || !sceneD || !sceneE) return;
 
                 
                 console.log(scrollY);
@@ -77,12 +86,36 @@ import SceneB from "../views/SceneB.astro";
                     sceneA.classList.add('translate-y-full');
                 }
 
-                if (scrollY > 21600 && scrollY < 29000) {
+                if (scrollY > 21600 && scrollY < 30900) {
                     sceneB.classList.remove('opacity-0');
                     sceneB.classList.remove('translate-y-full');
                 } else {
                     sceneB.classList.add('opacity-0');
                     sceneB.classList.add('translate-y-full');
+                }
+
+                if (scrollY > 38300 && scrollY < 42200) {
+                    sceneC.classList.remove('opacity-0');
+                    sceneC.classList.remove('translate-y-full');
+                } else {
+                    sceneC.classList.add('opacity-0');
+                    sceneC.classList.add('translate-y-full');
+                }
+
+                if (scrollY > 50900 && scrollY < 56500) {
+                    sceneD.classList.remove('opacity-0');
+                    sceneD.classList.remove('translate-y-full');
+                } else {
+                    sceneD.classList.add('opacity-0');
+                    sceneD.classList.add('translate-y-full');
+                }
+
+                if (scrollY > 61000) {
+                    sceneE.classList.remove('opacity-0');
+                    sceneE.classList.remove('translate-y-full');
+                } else {
+                    sceneE.classList.add('opacity-0');
+                    sceneE.classList.add('translate-y-full');
                 }
             }
 
