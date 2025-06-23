@@ -1,7 +1,6 @@
 ---
-// import { Works } from "./Works";
+import { Works } from "./components/Works";
 ---
-
 
 <div id="scnB" class="fixed top-0 left-0 z-[11] h-screen w-screen transition-all duration-800 opacity-0 translate-y-full">
     <div id="scn2-overlay" class="fixed top-0 left-0 h-screen w-screen bg-black opacity-0 transition-opacity duration-300" />
@@ -9,13 +8,14 @@
 	<div class="relative w-screen max-h-screen overflow-y-auto">
 		<div class="fantasy-container pt-[50vh]">
 			<h2 class="text-center title-heading-1 translate-y-[-50%]">
-				Unprecedented</br>quality
+				Proud to work with<br />
+				inspiring creators
 			</h2>
 
 			<div class="flex flex-col gap-[24px] items-center pt-[calc(25vh_-_150px)]">
 				<h3 class="text-center title-heading-1 text-[10px] tracking-[0.em]">Serving the best</h3>
 
-				<!-- <Works client:load /> -->
+				<Works client:load />
 			</div>
 		</div>
 	</div>

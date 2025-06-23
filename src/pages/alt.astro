@@ -7,6 +7,9 @@ import SceneB from "../views/SceneB.astro";
 import SceneC from "../views/SceneC.astro";
 import SceneD from "../views/SceneD.astro";
 import SceneE from "../views/SceneE.astro";
+import SceneF from "../views/SceneF.astro";
+import { MapOverlay } from "../views/components/MapOverlay";
+import { ModalView } from "../views/components/ModalView";
 ---
 
 <Layout>
@@ -17,15 +20,20 @@ import SceneE from "../views/SceneE.astro";
             <source src="/videos/Fantasy_WEB_test_keyframe_8_optimized.mp4" type="video/mp4">
         </video>
     </div>
+    <div id="darken-overlay" class="fixed top-[0] left-[0] w-full h-[100vh] bg-black/50 z-[10] opacity-0 transition-opacity duration-800" />
 
-    <main id="content" class="h-[15000px]">
-        <Nav />
+    <main id="content" class="pt-[15000px]">
+        <Nav client:load />
         <SceneA />
         <SceneB />
         <SceneC />
         <SceneD />
         <SceneE />
     </main>
+    <SceneF />
+    
+	<MapOverlay client:load />
+	<ModalView client:load />
 
     <style>
         .video-container {
@@ -54,6 +62,7 @@ import SceneE from "../views/SceneE.astro";
             const sceneC = document.getElementById('scnC') as HTMLDivElement;
             const sceneD = document.getElementById('scnD') as HTMLDivElement;
             const sceneE = document.getElementById('scnE') as HTMLDivElement;
+            const sceneF = document.getElementById('scnF') as HTMLDivElement;
 
             const video = document.getElementById('scrollVideo') as HTMLVideoElement;
             video.load();
@@ -66,56 +75,99 @@ import SceneE from "../views/SceneE.astro";
             // Update content height based on parameter
             const contentDiv = document.getElementById('content') as HTMLDivElement;
             if (contentDiv) {
-                contentDiv.style.height = `${screenHeight}px`;
+                contentDiv.style.paddingTop = `${screenHeight}px`;
             }
 
             let lastUpdate = 0;
             const throttleDelay = 1000 / fps; // Convert fps to milliseconds between updates
 
             const handleContentVisibility = (scrollY: number) => {
-                if (!sceneA || !sceneB || !sceneC || !sceneD || !sceneE) return;
-
-                
-                console.log(scrollY);
+                if (!sceneA || !sceneB || !sceneC || !sceneD || !sceneE || !sceneF) return;
 
                 if (scrollY > 7300 && scrollY < 16500) {
                     sceneA.classList.remove('opacity-0');
                     sceneA.classList.remove('translate-y-full');
+                    document.getElementById('link_scnA')?.classList.remove('text-primary');
+                    document.getElementById('link_scnA')?.classList.add('text-dark-1');
+                    document.getElementById('link_scnA')?.classList.add('bg-primary');
                 } else {
                     sceneA.classList.add('opacity-0');
                     sceneA.classList.add('translate-y-full');
+                    document.getElementById('link_scnA')?.classList.add('text-primary');
+                    document.getElementById('link_scnA')?.classList.remove('text-dark-1');
+                    document.getElementById('link_scnA')?.classList.remove('bg-primary');
                 }
 
                 if (scrollY > 21600 && scrollY < 30900) {
                     sceneB.classList.remove('opacity-0');
                     sceneB.classList.remove('translate-y-full');
+                    document.getElementById('link_scnB')?.classList.remove('text-primary');
+                    document.getElementById('link_scnB')?.classList.add('text-dark-1');
+                    document.getElementById('link_scnB')?.classList.add('bg-primary');
                 } else {
                     sceneB.classList.add('opacity-0');
                     sceneB.classList.add('translate-y-full');
+                    document.getElementById('link_scnB')?.classList.add('text-primary');
+                    document.getElementById('link_scnB')?.classList.remove('text-dark-1');
+                    document.getElementById('link_scnB')?.classList.remove('bg-primary');
                 }
 
                 if (scrollY > 38300 && scrollY < 42200) {
                     sceneC.classList.remove('opacity-0');
                     sceneC.classList.remove('translate-y-full');
+                    document.getElementById('link_scnC')?.classList.remove('text-primary');
+                    document.getElementById('link_scnC')?.classList.add('text-dark-1');
+                    document.getElementById('link_scnC')?.classList.add('bg-primary');
                 } else {
                     sceneC.classList.add('opacity-0');
                     sceneC.classList.add('translate-y-full');
+                    document.getElementById('link_scnC')?.classList.add('text-primary');
+                    document.getElementById('link_scnC')?.classList.remove('text-dark-1');
+                    document.getElementById('link_scnC')?.classList.remove('bg-primary');
+                }
+
+                if (scrollY > 49900 && scrollY < 56500) {
+                    document.getElementById('darken-overlay')?.classList.add('opacity-100');
+                } else {
+                    document.getElementById('darken-overlay')?.classList.remove('opacity-100');
                 }
 
                 if (scrollY > 50900 && scrollY < 56500) {
                     sceneD.classList.remove('opacity-0');
                     sceneD.classList.remove('translate-y-full');
+                    document.getElementById('link_scnD')?.classList.remove('text-primary');
+                    document.getElementById('link_scnD')?.classList.add('text-dark-1');
+                    document.getElementById('link_scnD')?.classList.add('bg-primary');
                 } else {
                     sceneD.classList.add('opacity-0');
                     sceneD.classList.add('translate-y-full');
+                    document.getElementById('link_scnD')?.classList.add('text-primary');
+                    document.getElementById('link_scnD')?.classList.remove('text-dark-1');
+                    document.getElementById('link_scnD')?.classList.remove('bg-primary');
                 }
 
-                if (scrollY > 61000) {
+                if (scrollY > 61000 && scrollY < 80000) {
                     sceneE.classList.remove('opacity-0');
                     sceneE.classList.remove('translate-y-full');
+                    document.getElementById('link_scnE')?.classList.remove('text-primary');
+                    document.getElementById('link_scnE')?.classList.add('text-dark-1');
+                    document.getElementById('link_scnE')?.classList.add('bg-primary');
                 } else {
                     sceneE.classList.add('opacity-0');
                     sceneE.classList.add('translate-y-full');
+                    document.getElementById('link_scnE')?.classList.add('text-primary');
+                    document.getElementById('link_scnE')?.classList.remove('text-dark-1');
+                    document.getElementById('link_scnE')?.classList.remove('bg-primary');
+                }
+
+                if (scrollY > 80000) {
+                    document.getElementById('link_scnF')?.classList.remove('text-primary');
+                    document.getElementById('link_scnF')?.classList.add('text-dark-1');
+                    document.getElementById('link_scnF')?.classList.add('bg-primary');
+                } else {
+                    document.getElementById('link_scnF')?.classList.add('text-primary');
+                    document.getElementById('link_scnF')?.classList.remove('text-dark-1');
+                    document.getElementById('link_scnF')?.classList.remove('bg-primary');
                 }
             }
 
@@ -125,7 +177,7 @@ import SceneE from "../views/SceneE.astro";
                 lastUpdate = now;
 
                 const scrollTop = window.scrollY;
-                const maxScroll = document.body.scrollHeight - window.innerHeight;
+                const maxScroll = (document.getElementById('content')?.scrollHeight ?? 0) - window.innerHeight;
 
                 const scrollFraction = scrollTop / maxScroll;
                 const videoDuration = video.duration;

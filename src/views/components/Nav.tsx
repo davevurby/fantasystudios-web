@@ -1,12 +1,57 @@
 import clsx from "clsx"
+import { useModal } from "../../hooks/use-modal"
+import { useNavStore } from "../../hooks/use-nav";
 
 export const Nav = () => {
+    const { modal, setModal } = useModal();
+    const { disableLinks } = useNavStore();
 
     const handleStudioClick = (studio: 'STUDIO_A' | 'STUDIO_B') => {
-       
+        setModal(studio);
     }
 
-    const handleSceneChange = (index: number) => {
+    const handleSceneChange = (scn: string) => {
+        if (scn === 'scnA') {
+            window.scrollTo({
+                top: 7300,
+                behavior: 'smooth'
+            });
+        }
+
+        if (scn === 'scnB') {
+            window.scrollTo({
+                top: 21600 + 100,
+                behavior: 'smooth'
+            });
+        }
+
+        if (scn === 'scnC') {
+            window.scrollTo({
+                top: 38300 + 100,
+                behavior: 'smooth'
+            });
+        }
+
+        if (scn === 'scnD') {
+            window.scrollTo({
+                top: 50900 + 100,
+                behavior: 'smooth'
+            });
+        }
+
+        if (scn === 'scnE') {
+            window.scrollTo({
+                top: 61000 + 100,
+                behavior: 'smooth'
+            });
+        }
+
+        if (scn === 'scnF') {
+            window.scrollTo({
+                top: 80000 + 100,
+                behavior: 'smooth'
+            });
+        }
         
     }
 
@@ -16,7 +61,7 @@ export const Nav = () => {
         <nav className="fixed top-[0] left-[0] w-full z-[200] flex justify-between items-center px-[30px] pt-[30px]">
             <button
                 type="button"
-                onClick={() => handleSceneChange(0)}
+                onClick={() => handleSceneChange('scnA')}
             >
                 <svg width="87" height="24" viewBox="0 0 87 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={`text-${logoColorClass}`}>
                     <path d="M1.66697 9.5V0.692H9.08297V2.432H3.46697V4.148H8.27897V5.9H3.46697V9.5H1.66697ZM12.3207 9.5L15.8727 0.692H17.6487L21.2007 9.5H19.2567L18.6207 7.868H14.9007L14.2647 9.5H12.3207ZM15.5487 6.188H17.9727L16.7607 3.056L15.5487 6.188ZM26.1053 9.5V0.692H28.3253L32.6693 6.536V0.692H34.4333V9.5H32.6693L27.8693 3.104V9.5H26.1053ZM42.8291 9.5V2.432H39.3131V0.692H48.1451V2.432H44.6291V9.5H42.8291ZM51.0465 9.5L54.5985 0.692H56.3745L59.9265 9.5H57.9825L57.3465 7.868H53.6265L52.9905 9.5H51.0465ZM54.2745 6.188H56.6985L55.4865 3.056L54.2745 6.188ZM68.4863 9.62C66.7943 9.62 65.1263 8.9 63.9863 7.856L65.6303 6.608C66.4343 7.46 67.4063 7.844 68.6663 7.844C69.6263 7.844 70.8503 7.568 70.8503 6.8C70.8503 6.224 70.2383 5.96 69.1343 5.84L67.8743 5.708C66.2423 5.54 64.4783 5.012 64.4783 3.176C64.4783 1.196 66.7823 0.536 68.2463 0.536C70.0343 0.536 71.5823 1.244 72.4583 2.18L70.8863 3.38C70.0343 2.588 69.2783 2.312 68.1143 2.312C67.2863 2.312 66.3383 2.504 66.3383 3.104C66.3383 3.716 67.0583 3.836 68.1263 3.968L69.4703 4.136C71.2943 4.364 72.7103 5.024 72.7103 6.752C72.7103 8.72 70.6823 9.62 68.4863 9.62ZM80.3426 9.5V6.152L76.5506 0.692H78.7346L81.2426 4.28L83.7146 0.692H85.8986L82.1426 6.176V9.5H80.3426Z" fill="currentColor"/>
@@ -27,52 +72,41 @@ export const Nav = () => {
             <div className={clsx(
                 "absolute left-0 right-0 mx-auto top-[calc(30px+56px+32px)] lg:top-[30px] h-[56px] w-auto gap-[48px] hidden md:flex justify-center items-center pointer-events-none transition-opacity duration-800",
             )}>
-                <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
-                    // activeIndex === 3 && "text-dark-1 bg-primary",
-                    // activeIndex !== 3 && "text-primary",
-                    // disableLinks && "opacity-0 pointer-events-none"
-                    "text-primary"
-                )} onClick={() => handleSceneChange(3)}>projects</button>
+                <button id="link_scnB" className={clsx(
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer text-primary",
+                    disableLinks && "opacity-0 pointer-events-none"
+                )} onClick={() => handleSceneChange('scnB')}>projects</button>
 
-                <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
-                    // activeIndex === 5 && "text-dark-1 bg-primary",
-                    // activeIndex !== 5 && "text-primary",
-                    // disableLinks && "opacity-0 pointer-events-none"
-                    "text-primary"
-                )} onClick={() => handleSceneChange(5)}>services</button>
+                <button id="link_scnC" className={clsx(
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer text-primary",
+                    disableLinks && "opacity-0 pointer-events-none"
+                )} onClick={() => handleSceneChange('scnC')}>services</button>
 
                 <div className="relative flex gap-[4px] p-[4px] border border-primary">
                     <button className={clsx(
                         "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto cursor-pointer transition-all duration-800",
-                        // visibleStudio === 'STUDIO_A' && "text-dark-1 bg-primary",
-                        // visibleStudio !== 'STUDIO_A' && "text-primary"
-                        "text-primary"
+                        modal === 'STUDIO_A' && "text-dark-1 bg-primary",
+                        modal !== 'STUDIO_A' && "text-primary"
                     )} onClick={() => handleStudioClick('STUDIO_A')}>studio a</button>
 
                     <button className={clsx(
                         "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto cursor-pointer transition-all duration-800",
-                        // visibleStudio === 'STUDIO_B' && "text-dark-1 bg-primary",
-                        // visibleStudio !== 'STUDIO_B' && "text-primary"
-                        "text-primary"
+                        modal === 'STUDIO_B' && "text-dark-1 bg-primary",
+                        modal !== 'STUDIO_B' && "text-primary"
                     )} onClick={() => handleStudioClick('STUDIO_B')}>studio b</button>
 
                     <div className="absolute top-[calc(100%+7px)] left-0 w-full text-center text-primary uppercase text-[9px] tracking-[2em] px-[44px]">studios</div>
                 </div>
 
-                <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
-                    // activeIndex === 9 && "text-dark-1 bg-primary",
-                    // activeIndex !== 9 && "text-primary",
-                    // disableLinks && "opacity-0 pointer-events-none"
-                    "text-primary"
-                )} onClick={() => handleSceneChange(9)}>about us</button>
+                <button id="link_scnE" className={clsx(
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer text-primary",
+                    disableLinks && "opacity-0 pointer-events-none"
+                )} onClick={() => handleSceneChange('scnE')}>about us</button>
 
-                <button className={clsx(
-                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer",
-                    "text-primary"
-                )} onClick={() => handleSceneChange(10)}>contact</button>
+                <button id="link_scnF" className={clsx(
+                    "text-[12px] tracking-[0.3em] px-[10px] h-[24px] pt-[3px] uppercase pointer-events-auto transition-all duration-800 cursor-pointer text-primary",
+                    disableLinks && "opacity-0 pointer-events-none"
+                )} onClick={() => handleSceneChange('scnF')}>contact</button>
             </div>
 
             <div />

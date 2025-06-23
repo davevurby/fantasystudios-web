@@ -2,10 +2,15 @@
 import { Play } from "lucide-react";
 ---
 
-<div id="scnA" class="fixed z-[10] h-screen w-screen flex flex-col items-center justify-center transition-all duration-800 opacity-0">
+<div id="scnA" class="fixed z-[11] top-[0] left-[0] h-screen w-screen flex flex-col items-center justify-center transition-all duration-800 opacity-0">
 	<div class="fantasy-container">
-        <div id="content-block" class="flex flex-col items-start justify-center gap-[16px] md:gap-[24px] absolute bottom-[25vh] translate-y-[50%] [@media(orientation:landscape)]:top-[50vh] [@media(orientation:landscape)]:bottom-auto [@media(orientation:landscape)]:translate-y-0">
-            <h2 class="text-left title-heading-1">The reality<br /> has never been </br>more real.</h2>
+        <div id="content-block" class="flex flex-col items-start justify-center text-light gap-[32px] md:gap-[40px] absolute bottom-[25vh] translate-y-[50%] [@media(orientation:landscape)]:top-[50vh] [@media(orientation:landscape)]:bottom-auto [@media(orientation:landscape)]:translate-y-0">
+            <div class="flex flex-col gap-[10px]">
+                <h2 class="text-left title-heading-1">Empowering<br />creators</h2>
+                <p class="text-left perex-large p-0">
+                    Virtual Production based in Prague.
+                </p>
+            </div>
 
 		    <button type="button" class="btn-primary-light btn-sm lg:btn-lg cursor-pointer flex items-center gap-[10px]">
                 <Play className="translate-y-[-1px] size-[12px] md:size-[16px]" />

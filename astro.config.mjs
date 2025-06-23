@@ -27,6 +27,7 @@ export default defineConfig({
   {
     provider: fontProviders.google(),
     name: "Afacad",
+    weights: [400],
     cssVariable: "--font-afacad"
 }]
   },
