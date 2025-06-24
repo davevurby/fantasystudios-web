@@ -17,7 +17,7 @@ import { ModalView } from "../views/components/ModalView";
 
     <div class="video-container">
         <video id="scrollVideo" playsinline preload="auto">
-            <source src="/videos/Fantasy_WEB_test_keyframe_8_optimized.mp4" type="video/mp4">
+            <source src="/videos/Fantasy_WEB_nahled_02_optimizedA.mp4" type="video/mp4">
         </video>
     </div>
     <div id="darken-overlay" class="fixed top-[0] left-[0] w-full h-[100vh] bg-black/50 z-[10] opacity-0 transition-opacity duration-800" />
@@ -84,6 +84,8 @@ import { ModalView } from "../views/components/ModalView";
             const handleContentVisibility = (scrollY: number) => {
                 if (!sceneA || !sceneB || !sceneC || !sceneD || !sceneE || !sceneF) return;
 
+                console.log(scrollY);
+
                 if (scrollY > 7300 && scrollY < 16500) {
                     sceneA.classList.remove('opacity-0');
                     sceneA.classList.remove('translate-y-full');
@@ -112,7 +114,7 @@ import { ModalView } from "../views/components/ModalView";
                     document.getElementById('link_scnB')?.classList.remove('bg-primary');
                 }
 
-                if (scrollY > 38300 && scrollY < 42200) {
+                if (scrollY > 38300 && scrollY < 48000) {
                     sceneC.classList.remove('opacity-0');
                     sceneC.classList.remove('translate-y-full');
                     document.getElementById('link_scnC')?.classList.remove('text-primary');
