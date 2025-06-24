@@ -19,7 +19,7 @@ export const Nav = () => {
     const logoColorClass = activeScene?.logoColor ?? 'light';
 
     return (
-        <nav className="fixed top-[0] left-[0] w-full z-[200] flex justify-between items-center px-[30px] pt-[30px]">
+        <nav id="nav" className="fixed top-[0] left-[0] w-full z-[200] flex justify-between items-center px-[30px] pt-[30px]">
             <button
                 type="button"
                 onClick={() => handleSceneChange(0)}
