@@ -149,7 +149,7 @@ export const Works = () => {
                     <button 
                         key={work.id} 
                         className={clsx(
-                            "bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1] transition-opacity cursor-pointer relative overflow-hidden",
+                            "bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1] transition-opacity duration-500 cursor-pointer relative overflow-hidden",
                             hoveredWorkId !== null && hoveredWorkId !== work.id && "opacity-60",
                             hoveredWorkId === work.id && "opacity-100"
                         )}
@@ -170,7 +170,7 @@ export const Works = () => {
                             <button 
                                 key={work.id} 
                                 className={clsx(
-                                    "bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1] transition-opacity cursor-pointer relative overflow-hidden",
+                                    "bg-dark-1 w-[calc(33.33333333333333%-14px)] md:w-[calc(33.33333333333333%-32px)] aspect-[2/1] transition-opacity duration-500 cursor-pointer relative overflow-hidden",
                                     hoveredWorkId !== null && hoveredWorkId !== work.id && "opacity-60",
                                     hoveredWorkId === work.id && "opacity-100"
                                 )}
