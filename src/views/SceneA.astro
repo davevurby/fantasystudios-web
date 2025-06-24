@@ -1,5 +1,6 @@
 ---
 import { Play } from "lucide-react";
+import { ShowreelButton } from "./components/ShowreelButton";
 ---
 
 <div id="scnA" class="fixed z-[11] top-[0] left-[0] h-screen w-screen flex flex-col items-center justify-center transition-all duration-800 opacity-0">
@@ -12,10 +13,7 @@ import { Play } from "lucide-react";
                 </p>
             </div>
 
-		    <button type="button" class="btn-primary-light btn-sm lg:btn-lg cursor-pointer flex items-center gap-[10px]">
-                <Play className="translate-y-[-1px] size-[12px] md:size-[16px]" />
-                showreal
-            </button>	
+            <ShowreelButton client:load />
         </div>
 	</div>
 </div>

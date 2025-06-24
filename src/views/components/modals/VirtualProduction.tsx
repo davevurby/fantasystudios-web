@@ -20,6 +20,19 @@ export const VirtualProduction = () => (
             Almost whatever you want is possible with the right tool and the right team. Fantasy studios has both. Unprecedented quality and technology with determination of people aiming only for the best outcome.
         </div>
 
+        <img src="/virtual_production_4.png" className="w-full h-auto" />
+
+        <div className="md:px-[64px] h1-large">
+            <span className="text-primary">Prague, Berlin, Warsaw, Weinna, Munich, Bratislava, Dolní Bojanovice, Saint-Jean-de-Luz...</span>
+            <br />
+            <br />
+            <span className="text-dark-1">...anywhere.</span>
+        </div>
+
+        <div className="md:px-[64px] body-1-large">
+            Mobile Virtual Production setup brings complete technology and crew directly to your location.
+        </div>
+
         <div className="h-[128px]" />
     </div>
 );
