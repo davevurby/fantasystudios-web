@@ -5,6 +5,10 @@ import { useModal } from "../../hooks/use-modal";
 import { StudioA } from "./modals/StudioA";
 import { StudioB } from "./modals/StudioB";
 import { VirtualProduction } from "./modals/VirtualProduction";
+import { ContentCreation } from "./modals/ContentCreation";
+import { MotionCapturing } from "./modals/MotionCapturing";
+import { Team } from "./modals/Team";
+import { Partners } from "./modals/Partners";
 
 export const ModalView = () => {
     const { modal, setModal } = useModal();
@@ -38,6 +42,22 @@ export const ModalView = () => {
 
                     {modal === 'VIRTUAL_PRODUCTION' && (
                         <VirtualProduction />
+                    )}
+
+                    {modal === 'CONTENT_CREATION' && (
+                        <ContentCreation />
+                    )}
+
+                    {modal === 'MOTION_CAPTURING' && (
+                        <MotionCapturing />
+                    )}
+
+                    {modal === 'TEAM' && (
+                        <Team />
+                    )}
+
+                    {modal === 'PARTNERS' && (
+                        <Partners />
                     )}
                 </div>
             </div>

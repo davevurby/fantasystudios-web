@@ -1,3 +1,7 @@
+---
+import { ModalOpenButton } from "./components/ModalOpenButton";
+---
+
 <div id="scnE" class="fixed top-0 left-0 z-[11] h-screen w-screen transition-all duration-800 opacity-0 translate-y-full">
 	<div class="fantasy-container pt-[50vh]">
 		<div class="translate-y-[-50%] flex flex-col gap-[32px] lg:gap-[64px]">
@@ -11,12 +15,13 @@
 			</div>
 
 			<div class="flex gap-[10px] [@media(orientation:landscape)]:flex-row lg:gap-[32px] [@media(orientation:landscape)]:translate-y-[-50%]">
-				<button class="btn-primary-light btn-sm lg:btn-lg flex items-center gap-[10px]">
-                    Team
-				</button>
-				<button class="btn-primary-light btn-sm lg:btn-lg flex items-center gap-[10px]">
+				<ModalOpenButton type="btn-primary-light" id="TEAM" client:load>
+					team
+				</ModalOpenButton>
+
+				<ModalOpenButton type="btn-primary-light" id="PARTNERS" client:load>
                     Partners
-				</button>
+				</ModalOpenButton>
 			</div>
 		</div>
 	</div>

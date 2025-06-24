@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useModal } from "../../hooks/use-modal";
 
 export interface ModalOpenButtonProps {
-    id: 'STUDIO_A' | 'STUDIO_B' | 'VIRTUAL_PRODUCTION';
+    id: 'STUDIO_A' | 'STUDIO_B' | 'VIRTUAL_PRODUCTION' | 'CONTENT_CREATION' | 'MOTION_CAPTURING' | 'TEAM' | 'PARTNERS';
     type: string;
 }
 
