@@ -1,1 +1,1 @@
-ffmpeg -i public/videos/Fantasy_WEB_nahled_02.mp4 -c:v libx264 -crf 22 -preset slow -g 8 -an public/videos/Fantasy_WEB_nahled_02_optimized.mp4
+ffmpeg -i public/videos/Warp_PROXY_28.mp4 -c:v libx264 -crf 22 -preset slow -g 8 -an public/videos/Warp_PROXY_28_optimized.mp4

@@ -17,7 +17,7 @@ import { ModalView } from "../views/components/ModalView";
 
     <div class="video-container">
         <video id="scrollVideo" playsinline preload="auto">
-            <source src="/videos/Fantasy_WEB_nahled_02_optimizedA.mp4" type="video/mp4">
+            <source src="/videos/Warp_PROXY_28_optimized.mp4" type="video/mp4">
         </video>
     </div>
     <div id="darken-overlay" class="fixed top-[0] left-[0] w-full h-[100vh] bg-black/50 z-[10] opacity-0 transition-opacity duration-800" />
@@ -98,7 +98,7 @@ import { ModalView } from "../views/components/ModalView";
                     document.getElementById('link_scnA')?.classList.remove('bg-primary');
                 }
 
-                if (scrollY > 21600 && scrollY < 30900) {
+                if (scrollY > 19900 && scrollY < 26400) {
                     sceneB.classList.remove('opacity-0');
                     sceneB.classList.remove('translate-y-full');
                     document.getElementById('link_scnB')?.classList.remove('text-primary');
@@ -112,7 +112,7 @@ import { ModalView } from "../views/components/ModalView";
                     document.getElementById('link_scnB')?.classList.remove('bg-primary');
                 }
 
-                if (scrollY > 38300 && scrollY < 48000) {
+                if (scrollY > 34000 && scrollY < 44100) {
                     sceneC.classList.remove('opacity-0');
                     sceneC.classList.remove('translate-y-full');
                     document.getElementById('link_scnC')?.classList.remove('text-primary');
@@ -126,13 +126,13 @@ import { ModalView } from "../views/components/ModalView";
                     document.getElementById('link_scnC')?.classList.remove('bg-primary');
                 }
 
-                if (scrollY > 49900 && scrollY < 56500) {
+                if (scrollY > 47100 && scrollY < 54000) {
                     document.getElementById('darken-overlay')?.classList.add('opacity-100');
                 } else {
                     document.getElementById('darken-overlay')?.classList.remove('opacity-100');
                 }
 
-                if (scrollY > 50900 && scrollY < 56500) {
+                if (scrollY > 47100 && scrollY < 54000) {
                     sceneD.classList.remove('opacity-0');
                     sceneD.classList.remove('translate-y-full');
                     document.getElementById('link_scnD')?.classList.remove('text-primary');
@@ -146,7 +146,7 @@ import { ModalView } from "../views/components/ModalView";
                     document.getElementById('link_scnD')?.classList.remove('bg-primary');
                 }
 
-                if (scrollY > 61000 && scrollY < 80000) {
+                if (scrollY > 57000 && scrollY < 71000) {
                     sceneE.classList.remove('opacity-0');
                     sceneE.classList.remove('translate-y-full');
                     document.getElementById('link_scnE')?.classList.remove('text-primary');
