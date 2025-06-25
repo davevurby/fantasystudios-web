@@ -89,7 +89,8 @@ const works = [
     },
     {
         id: 18,
-        link: "https://player.vimeo.com/video/1093341616?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        image: "/works/Notino-Fantasy.jpg",
+        link: "https://player.vimeo.com/video/1095975847?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
         id: 19,
